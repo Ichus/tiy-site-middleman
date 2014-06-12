@@ -13,5 +13,12 @@
 
   <body>
     <%= yield %>
+    <ul>
+      <% location = {"Asheville, NC" => "http://theironyard.com/locations/asheville/", "Atlanta, GA" => "http://theironyard.com/locations/atlanta/", "Austin, TX" => "http://theironyard.com/locations/austin/", "Charleston, SC" => "http://theironyard.com/locations/charleston/", "Columbia, SC" => "http://theironyard.com/locations/columbia/", "Durham, NC" => "http://theironyard.com/locations/durham/", "Greenville, SC" => "http://theironyard.com/locations/greenville/", "Houston, TX" => "http://theironyard.com/locations/houston/", "Spartanburg, SC" => "http://theironyard.com/locations/spartanburg/", "Tampa, FL" => "http://theironyard.com/locations/tampa/"} %>
+        <% location.each do |key, value| %>
+          <li><%= link_to key, value %></li>
+      <% end %>
+    </ul>
+    <a href="https://twitter.com/TheIronYard">Follow us on Twitter</a>
   </body>
 </html>
